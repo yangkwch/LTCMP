@@ -41,53 +41,56 @@
 										</div>
 										<div class="portlet-body form">
 											<!-- BEGIN FORM-->
-											<form action="/createcompanystore" class="form-horizontal">
+											<form action="{{ url('/createcompanystore')}}" method="POST" class="form-horizontal">
 											{{ csrf_field() }}
-												<h3 class="form-section">客户信息</h3>
+												<h3 class="form-section">基本信息</h3>
 												<div class="row-fluid">
 													<div class="span6 ">
 														<div class="control-group">
 															<label class="control-label">单位名称</label>
 															<div class="controls">
-																<input type="text" class="m-wrap span12" placeholder="请输入客户单位名称">
+																<input type="text" class="m-wrap span12" name="companyname" placeholder="请输入客户单位名称">
 																<span class="help-block">中英文字符</span>
 															</div>
 														</div>
 													</div>
 													<!--/span-->
+													
 													<div class="span6 ">
 														<div class="control-group">
 															<label class="control-label">上级公司</label>
 															<div class="controls">
-																<select class="m-wrap span12">
-																	<option>Country 1</option>
-																	<option>Country 2</option>
+																<select class="m-wrap span12" name="parentcompany">
+																	<option value=0></option>
+																@foreach ($companies as $company)
+																	<option value="{{ $company->id }}">{{ $company->id }}.{{ $company->companyname }}</option>
+																@endforeach
 																</select>
 															</div>
 														</div>
 													</div>
+													
 													<!--/span-->
 												</div>
 
-												<h3 class="form-section">地址</h3>
+												<h3 class="form-section">附加信息</h3>
 												<!--/row-->                   
 												<div class="row-fluid">
 													<div class="span12 ">
 														<div class="control-group">
 															<label class="control-label">注册地址</label>
 															<div class="controls">
-																<input type="text" class="m-wrap span12" >
+																<input type="text" class="m-wrap span12" name="registeredaddress">
 															</div>
 														</div>
+														<div class="control-group">
+															<label class="control-label">其他</label>
+															<div class="controls">
+																<input type="text" class="m-wrap span12" name="description">
+															</div>
+														</div>														
 													</div>
 												</div>
-
-												<!--/row-->           
-												<div class="row-fluid">
-										
-
-												</div>
-												<!--/row-->
 												<div class="form-actions">
 													<button type="submit" class="btn blue"><i class="icon-ok"></i> Save</button>
 													<button type="button" class="btn">Cancel</button>

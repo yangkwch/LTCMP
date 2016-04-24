@@ -257,7 +257,7 @@
 							<li><a href="#"><i class="icon-tasks"></i> 任务列表</a></li>
 							<li class="divider"></li>
 							<li><a href="{{url('/lockscreen')}}"><i class="icon-lock"></i> 锁屏</a></li>
-							<li><a href="login.html"><i class="icon-key"></i> 退出</a></li>
+							<li><a href="{{url('/logout')}}"><i class="icon-key"></i> 退出</a></li>
 						</ul>
 					</li>
 					<!-- END USER LOGIN DROPDOWN -->
@@ -316,12 +316,12 @@
 									新建客户单位</a>
 								</li>
 								<li >
-									<a href="layout_horizontal_menu1.html">
+									<a href="#">
 									修改客户单位</a>
 								</li>
 								<li >
-									<a href="layout_horizontal_menu1.html">
-									查询客户部门</a>
+									<a href="#">
+									查询客户单位</a>
 								</li>	
 							</ul>
 						</li>
@@ -332,15 +332,15 @@
 							</a>
 							<ul class="sub-menu">
 								<li >
-									<a href="ui_general.html">
+									<a href="#">
 									新建客户部门</a>
 								</li>
 								<li >
-									<a href="ui_buttons.html">
+									<a href="#">
 									修改客户部门</a>
 								</li>
 								<li >
-									<a href="ui_modals.html">
+									<a href="#">
 									查询客户部门</a>
 								</li>
 							</ul>
@@ -356,17 +356,133 @@
 									新建客户联系人</a>
 								</li>
 								<li >
-									<a href="form_samples.html">
+									<a href="#">
 									修改客户联系人</a>
 								</li>
 								<li >
-									<a href="form_component.html">
+									<a href="#">
 									查询客户联系人</a>
 								</li>
 							</ul>
 						</li>
 					</ul>
-				</li>				
+				</li>	
+
+				<li class="">
+					<a href="javascript:;">
+					<i class="icon-gift"></i> 
+					<span class="title">系统设置</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li >
+							<a href="javascript:;">
+							用户管理
+							<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li >
+									<a href="#">
+									新建用户</a>
+								</li>
+								<li >
+									<a href="#">
+									修改用户属性</a>
+								</li>
+								<li >
+									<a href="#">
+									查询用户</a>
+								</li>
+								<li >
+									<a href="#">
+									重置密码</a>
+								</li>
+							</ul>							
+						</li>
+						<li >
+							<a href="javascript:;">
+							群组管理
+							<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li >
+									<a href="#">
+									新建群组</a>
+								</li>
+								<li >
+									<a href="#">
+									修改群组属性</a>
+								</li>
+								<li >
+									<a href="#">
+									查询群组</a>
+								</li>
+							</ul>							
+						</li>
+						<li >
+							<a href="javascript:;">
+							角色管理
+							<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li >
+									<a href="#">
+									新建角色</a>
+								</li>
+								<li >
+									<a href="#">
+									修改角色属性</a>
+								</li>
+								<li >
+									<a href="#">
+									查询角色</a>
+								</li>
+							</ul>								
+						</li>
+						<li >
+							<a href="javascript:;">
+							权限管理
+							<span class="arrow"></span>
+							</a>
+							<ul class="sub-menu">
+								<li >
+									<a href="#">
+									用户<->群组</a>
+								</li>
+								<li >
+									<a href="#">
+									用户<->角色</a>
+								</li>
+							</ul>								
+						</li>
+					</ul>
+				</li>
+
+				<li class="">
+					<a href="javascript:;">
+					<i class="icon-gift"></i> 
+					<span class="title">个人设置</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li >
+							<a href="#">
+							用户配置</a>
+						</li>
+						<li >
+							<a href="#">
+							锁屏</a>
+						</li>
+						<li >
+							<a href="#">
+							FAQ</a>
+						</li>
+						<li >
+							<a href="#">
+							收件箱</a>
+						</li>
+					</ul>
+				</li>							
 
 				<li class="">
 					<a href="javascript:;">
@@ -376,52 +492,23 @@
 					</a>
 					<ul class="sub-menu">
 						<li >
-							<a href="page_timeline.html">
-							<i class="icon-time"></i>
-							朗天通讯</a>
-						</li>
-						<li >
-							<a href="page_coming_soon.html">
-							<i class="icon-cogs"></i>
-							LT-CMP</a>
-						</li>
-						<li >
-							<a href="page_blog.html">
+							<a href="{{ url('/help') }}">
 							<i class="icon-comments"></i>
 							帮助</a>
 						</li>
 						<li >
-							<a href="p{{ url('/about') }}">
-							<i class="icon-font"></i>
-							关于</a>
+							<a href="{{ url('/lonton') }}">
+							<i class="icon-time"></i>
+							朗天通讯</a>
+						</li>
+						<li >
+							<a href="{{ url('/ltcmp') }}">
+							<i class="icon-cogs"></i>
+							LT-CMP</a>
 						</li>
 					</ul>
 				</li>
-				<li class="">
-					<a href="javascript:;">
-					<i class="icon-gift"></i> 
-					<span class="title">个人设置</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li >
-							<a href="extra_profile.html">
-							用户配置</a>
-						</li>
-						<li >
-							<a href="extra_lock.html">
-							锁屏</a>
-						</li>
-						<li >
-							<a href="extra_faq.html">
-							FAQ</a>
-						</li>
-						<li >
-							<a href="inbox.html">
-							收件箱</a>
-						</li>
-					</ul>
-				</li>
+
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

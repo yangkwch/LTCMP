@@ -19,6 +19,7 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+
 Route::get('/lockscreen', function () {
     return view('lockscreen');
 });
@@ -35,3 +36,7 @@ Route::post('/createcompanystore', 'CustomerCompanyController@store');
 Route::get('/createcustomer', function () {
     return view('customer.contact.createcontact');
 });
+
+Route::get('/lonton', 'HelpController@lonton');
+Route::get('/ltcmp', 'HelpController@ltcmp');
+Route::get('/help', 'HelpController@help');

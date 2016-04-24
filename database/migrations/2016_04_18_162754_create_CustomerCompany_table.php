@@ -14,11 +14,15 @@ class CreateCustomerCompanyTable extends Migration
     {
         Schema::create('customercompany', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("companyname");
-            //$table->integer("parentcompanyid");
-            $table->string("registeredaddress");
-            $table->string("description");             
+            $table->string("companyname")->unique();;
+            $table->integer("parentcompanyid")->nullable();
+            $table->string("registeredaddress")->nullable();
+            $table->string("description")->nullable();         
             $table->timestamps();
+        });
+
+        Schema::table('customercompany', function (Blueprint $table) {
+
         });
     }
 

@@ -13,8 +13,19 @@ class HelpController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function about()
+
+    public function lonton()
     {
-        return view('help.about');
+        return view('help.lonton');
+    }
+
+    public function ltcmp()
+    {
+        return view('help.ltcmp');
+    }
+
+    public function help()
+    {
+        return view('help.help');
     }
 }

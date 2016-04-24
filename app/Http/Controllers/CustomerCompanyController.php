@@ -26,9 +26,14 @@ class CustomerCompanyController extends Controller
 
         $company = new CustomerCompanyModel;
 //*
-        $company->id = 2;
+        //$company->id = 2;
 
         $company->companyname = $request->companyname;
+
+        if($request->parentcompany)
+            $company->parentcompanyid = $request->parentcompany;
+        else
+            $company->parentcompanyid = 0;
 
         $company->registeredaddress = $request->registeredaddress;
 
@@ -38,7 +43,7 @@ class CustomerCompanyController extends Controller
 
         $company->save();
 
-        dd($company->id);
+        //dd($company->id);
 
         return redirect('/createcompany');
  
