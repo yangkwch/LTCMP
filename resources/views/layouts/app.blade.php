@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>朗天通讯合同管理平台</title>
     <link href="media/css/login-cmp.css" rel='stylesheet' type='text/css'>
     <!-- Fonts -->
     <link href="media/font-awesome/css/font-awesome.css" rel='stylesheet' type='text/css'>
